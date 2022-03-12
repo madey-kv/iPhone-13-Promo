@@ -1,0 +1,416 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: "SF UI Text", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #000; 
+  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+fieldset {
+  margin: 0;
+}
+
+.container {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.main__section {
+  padding: 70px 0;
+}
+
+.header {
+  padding: 30px 0;
+}
+
+.header__container {
+  max-width: 1130px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  height: 40px;
+}
+
+.navigation {
+  font-weight: 400;
+}
+
+.navigation__list {
+  display: flex;
+  align-items: center;
+}
+
+.navigation__item {
+  display: flex;
+  align-items: center;
+}
+
+.navigation__item:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 40px;
+  background-color: #c9c9c9;
+  margin: 0 25px;
+}
+
+.navigation__link {
+  transition: opacity 0.4s ease;
+}
+.navigation__link:hover {
+  opacity: 0.5;
+}
+
+@media (max-width: 800px) {
+  .header__container {
+    align-items: flex-start;
+  }
+  
+  .navigation {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .navigation__list {
+    display: block;
+  }
+
+  .navigation__item {
+    justify-content: flex-end;
+  }
+
+  .navigation__item:not(:last-child)::after {
+    display: none;
+  }
+}
+
+.button {
+  cursor: pointer;
+  padding: 18px 23px;
+  background: #0071E3;
+  border-radius: 30px;
+  border: none;
+  color: #fff;
+  transition: box-shadow 0.6s ease;
+}
+
+.button:hover {
+  box-shadow: 0 0 5px #73abe2, 0 0 25px #73abe2,
+    0 0 50px #73abe2, 0 0 200px #73abe2;
+}
+
+@media (max-width: 800px) {
+  .button {
+    font-size: 18px;
+  }
+}
+
+.offer__container {
+  padding: 30px;
+  margin: 0 -30px;
+  min-height: 820px;
+  background-image: url(./images/phones.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 1290px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-resolution: 2dppx) {
+  .offer__container {
+    background-image: url(./images/phones-2x.jpg);
+  }
+}
+
+.offer__main-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+
+.offer__title {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 41px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.offer__price {
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 800px) {
+  .offer__container {
+    background-image: url(./images/phones-800.jpg);
+    background-size: 800px;
+    min-height: 720px;
+  }
+
+  @media (min-resolution: 2dppx) {
+    .offer__container {
+      background-image: url(./images/phones-800-2x.jpg);
+    }
+  }
+
+  .offer__main-title {
+    font-size: 18px;
+  }
+
+  .offer__title {
+    font-size: 26px;
+  }
+
+  .offer__price {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 440px) {
+    .offer__container {
+      background-image: url(./images/phones-mob.jpg);
+      background-size: 400px;
+    }
+  
+    @media (min-resolution: 2dppx) {
+      .offer__container {
+        background-image: url(./images/phones-mob-2x.jpg);
+      }
+    }
+}
+
+.features__title {
+  font-size: 34px;
+  line-height: 40px;
+  text-align: center;
+  margin-bottom: 80px;
+  font-weight: 500;
+}
+
+.features__list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  gap: 60px 30px;
+}
+
+.card {
+  width: 410px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card__picture {
+  box-shadow: 0px 10px 40px 10px rgba(0, 0, 0, 0.06);
+  border-radius: 34px;
+  margin-bottom: 35px;
+}
+
+.card__title {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+.card__description {
+  font-size: 22px;
+  line-height: 26px;
+  max-width: 300px;
+}
+
+@media (max-width: 800px) {
+  .features__title {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 440px) {
+  .card__title {
+    font-size: 16px;
+  }
+
+  .card__description {
+    font-size: 18px;
+  }
+}
+
+.order__title {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 41px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.form {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 60px 30px;
+  margin-bottom: 90px;
+}
+
+.form__box {
+  width: 630px;
+  border: 1px solid #C9C9C9;
+  border-radius: 34px;
+  padding: 70px 80px 100px;
+}
+
+.form__title-box {
+  font-weight: 300;
+  font-size: 34px;
+  line-height: 40px;
+  text-align: center;
+  color: #c9c9c9;
+}
+
+.form__label {
+  font-size: 16px;
+  line-height: 16px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.form__input {
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  width: 100%;
+  height: 90px;
+  display: block;
+  margin-bottom: 50px;
+  border: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  transition: box-shadow 0.6s ease;
+}
+
+.form__input:last-child {
+  margin-bottom: 0;
+}
+
+.form__input:hover {
+  box-shadow: 0px 0px 10px rgba(0, 113, 227, 0.5);
+}
+
+.form__input:focus {
+  outline: 1px solid #0071E3;
+}
+
+.form__submit {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 800px) {
+  .form__box {
+    width: 100%;
+    padding: 40px 30px 80px;
+  }
+
+  .form__title-box {
+    font-size: 28px;
+    line-height: 1;
+  }
+
+  .form__input {
+    height: 60px;
+  } 
+}
+
+
+.footer {
+  width: 100%;
+  background-color: #c9c9c9;
+  color: #fff;
+}
+
+.footer__flex {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  align-items: center;
+  margin-top: 30px;
+  line-height: 20px;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+@media (max-width: 550px) {
+  .footer__flex {
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    padding: 20px 10px;
+  }
+}
+
+.footer__copyright {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__info {
+  line-height: 16px;
+}
+
+.footer__mail {
+  padding-top: 13px;
+  transition: opacity 0.4s ease;
+}
+
+.footer__mail:hover {
+  opacity: 0.5;
+}

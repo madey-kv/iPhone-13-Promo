@@ -4,21 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>iPhone 13 Promo</title>
+
+    <link rel="icon" href="./images/apple.svg">
+    <link rel="preload" href="vendor/fonts/SFUIText-Light.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="vendor/fonts/SFUIText-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="vendor/fonts/SFUIText-Medium.woff2" as="font" type="font/woff2" crossorigin>
+
     <link rel="stylesheet" href="./vendor/normalize.css">
     <link rel="stylesheet" href="./vendor/fonts/fonts.css">
-    <link rel="stylesheet" href="./pages/style.css">
-    <title>iPhone 13 Promo</title>
+    <link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="header__container">
-                <img src="./images/apple.svg" alt="логотип Apple" class="header__logo">
+                <a href="#"><img src="./images/apple.svg" alt="логотип Apple" class="header__logo"></a> 
                 <nav class="navigation header__navigation">
                     <ul class="navigation__list">
-                        <li class="navigation__item"><a href="#">Оформить предзаказ</a></li>
-                        <li class="navigation__item"><a href="#">Доставка</a></li>
-                        <li class="navigation__item"><a href="#">Официальный сайт Apple</a></li>
+                        <li class="navigation__item"><a class="navigation__link" href="#order">Оформить предзаказ</a></li>
+                        <li class="navigation__item"><a class="navigation__link" href="#">Доставка</a></li>
+                        <li class="navigation__item"><a class="navigation__link" href="#">Официальный сайт Apple</a></li>
                     </ul>
                 </nav>
             </div>
@@ -35,7 +43,7 @@
 
                     <p class="offer__price">от 79 000 руб.</p>
 
-                    <button class="button offer__button">Оформить предзаказ</button>
+                    <a href="#order"><button class="button">Оформить предзаказ</button></a> 
                 </div>
             </div>
         </section>
@@ -46,7 +54,14 @@
 
                 <ul class="features__list">
                     <li class="features__item card">
-                        <img src="./images/camera.jpg" alt="новый модуль камер" class="card__picture">
+                        <picture>
+                            <source type="image/avif" srcset="./images/camera.avif 1x, images/camera-2x.avif 2x">
+                            <source type="image/webp" srcset="./images/camera.webp 1x, images/camera-2x.webp 2x">
+                            <img src="./images/camera.jpg"
+                            srcset="./images/camera-2x.jpg 2x"
+                            alt="новый модуль камер" 
+                            class="card__picture">
+                        </picture>
 
                         <h3 class="card__title">Камера</h3>
 
@@ -54,7 +69,14 @@
                     </li>
 
                     <li class="features__item card">
-                        <img src="./images/compect.jpg" alt="комплект поставки" class="card__picture">
+                        <picture>
+                            <source type="image/avif" srcset="./images/compect.avif 1x, images/compect-2x.avif 2x">
+                            <source type="image/webp" srcset="./images/compect.webp 1x, images/compect-2x.webp 2x">
+                            <img src="./images/compect.jpg"
+                            srcset="./images/compect-2x.jpg 2x"
+                            alt="комплект поставки" 
+                            class="card__picture">
+                        </picture>
 
                         <h3 class="card__title">Комплектация</h3>
 
@@ -62,7 +84,14 @@
                     </li>
 
                     <li class="features__item card">
-                        <img src="./images/color.jpg" alt="серый и синий телефоны" class="card__picture">
+                        <picture>
+                            <source type="image/avif" srcset="./images/color.avif 1x, images/color-2x.avif 2x">
+                            <source type="image/webp" srcset="./images/color.webp 1x, images/color-2x.webp 2x">
+                            <img src="./images/color.jpg"
+                            srcset="./images/color-2x.jpg 2x"
+                            alt="серый и синий телефоны" 
+                            class="card__picture">
+                        </picture>
 
                         <h3 class="card__title">Цвет</h3>
 
@@ -70,7 +99,14 @@
                     </li>
 
                     <li class="features__item card">
-                        <img src="./images/frame.jpg" alt="зеленый телефон" class="card__picture">
+                        <picture>
+                            <source type="image/avif" srcset="./images/frame.avif 1x, images/frame-2x.avif 2x">
+                            <source type="image/webp" srcset="./images/frame.webp 1x, images/frame-2x.webp 2x">
+                            <img src="./images/frame.jpg"
+                            srcset="./images/frame-2x.jpg 2x"
+                            alt="зеленый телефон" 
+                            class="card__picture">
+                        </picture>
 
                         <h3 class="card__title">Корпус</h3>
 
@@ -78,7 +114,14 @@
                     </li>
 
                     <li class="features__item card">
-                        <img src="./images/line.jpg" alt="4 телефона разных размеров" class="card__picture">
+                        <picture>
+                            <source type="image/avif" srcset="./images/line.avif 1x, images/line-2x.avif 2x">
+                            <source type="image/webp" srcset="./images/line.webp 1x, images/line-2x.webp 2x">
+                            <img src="./images/line.jpg"
+                            srcset="./images/line-2x.jpg 2x"
+                            alt="4 телефона разных размеров" 
+                            class="card__picture">
+                        </picture>
 
                         <h3 class="card__title">Линейка</h3>
 
@@ -86,7 +129,14 @@
                     </li>
 
                     <li class="features__item card">
-                        <img src="./images/charger_magnetic.jpg" alt="телефон с зарядным устройством" class="card__picture">
+                        <picture>
+                            <source type="image/avif" srcset="./images/charger_magnetic.avif 1x, images/charger_magnetic-2x.avif 2x">
+                            <source type="image/webp" srcset="./images/charger_magnetic.webp 1x, images/charger_magnetic-2x.webp 2x">
+                            <img src="./images/charger_magnetic.jpg"
+                            srcset="./images/charger_magnetic-2x.jpg 2x"
+                            alt="телефон и зарядое устройство" 
+                            class="card__picture">
+                        </picture>
 
                         <h3 class="card__title">Зарядка</h3>
 
@@ -98,17 +148,17 @@
 
         <section class="main__section order">
             <div class="container">
-                <h2 class="order__title">Оформить предзаказ</h2>
+                <a name="order"></a><h2 class="order__title">Оформить предзаказ</h2>
 
-                <form action="#" class="form order__form">
+                <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="form order__form" id="form-order">
                     <fieldset class="form__box">
                         <legend class="form__title-box">Персональные данные</legend>
 
-                        <label for="fullName" class="form__label">ФИО</label>
-                        <input type="text" id="fullName" name="fullName" class="form__input">
+                        <label for="fullName" class="form__label">ФИО<sup>*</sup></label>
+                        <input type="text" id="fullName" name="fullName" class="form__input" required placeholder="Обязательное поле">
 
-                        <label for="phone" class="form__label">Телефон</label>
-                        <input type="text" id="phone" name="phone" class="form__input">
+                        <label for="phone" class="form__label">Телефон<sup>*</sup></label>
+                        <input type="text" id="phone" name="phone" class="form__input" required placeholder="Обязательное поле">
 
                         <label for="email" class="form__label">E-mail</label>
                         <input type="email" id="email" name="email" class="form__input">
@@ -117,29 +167,29 @@
                     <fieldset class="form__box">
                         <legend class="form__title-box">Адрес доставки</legend>
 
-                        <label for="city" class="form__label">Город</label>
-                        <input type="text" id="city" name="city" class="form__input">
+                        <label for="city" class="form__label">Город<sup>*</sup></label>
+                        <input type="text" id="city" name="city" class="form__input" required placeholder="Обязательное поле">
 
-                        <label for="index" class="form__label">Индекс</label>
-                        <input type="text" id="index" name="index" class="form__input">
+                        <label for="index" class="form__label">Индекс<sup>*</sup></label>
+                        <input type="text" id="index" name="index" class="form__input" required placeholder="Обязательное поле">
 
-                        <label for="address" class="form__label">Адрес</label>
-                        <input type="text" id="address" name="address" class="form__input">
+                        <label for="address" class="form__label">Адрес<sup>*</sup></label>
+                        <input type="text" id="address" name="address" class="form__input" required placeholder="Обязательное поле">
                     </fieldset>
 
                     <fieldset class="form__box">
                         <legend class="form__title-box">Выбор модели</legend>
 
-                        <label for="color" class="form__label"></label>
-                        <select name="color" id="color" class="form__select">
-                            <option value="iPhone_13">Цвет</option>
+                        <label for="model" class="form__label">Модель</label>
+                        <select name="model" id="model" class="form__select">
+                            <option value="iPhone_13">iPhone 13</option>
                             <option value="iPhone_13_mini">iPhone 13 mini</option>
                             <option value="iPhone_13_Pro">iPhone 13 Pro</option>
                             <option value="iPhone_13_Pro_Max">iPhone 13 Pro Max</option>
                         </select>
 
-                        <label for="model" class="form__label"></label>
-                        <select name="model" id="model" class="form__select">
+                        <label for="color" class="form__label">Цвет</label>
+                        <select name="color" id="color" class="form__select">
                             <option value="Pink">Розовый</option>
                             <option value="Blue">Синий</option>
                             <option value="Midnight">Темная ночь</option>
@@ -151,38 +201,40 @@
                         <legend class="form__title-box">Аксессуары</legend>
 
                         <label class="form__label checkbox">
-                            <input type="checkbox" name="accessories" id="case">Чехол
+                            <input class="checkbox__input" type="checkbox" name="accessories" value="case">Чехол
                         </label>
 
                         <label class="form__label checkbox">
-                            <input type="checkbox" name="accessories" id="AirPods">Наушники AirPods 3 
+                            <input class="checkbox__input" type="checkbox" name="accessories" value="AirPods" disabled>Наушники AirPods 3 
                         </label>
 
                         <label class="form__label checkbox">
-                            <input type="checkbox" name="accessories" id="glass">Защитное стекло
+                            <input class="checkbox__input" type="checkbox" name="accessories" value="glass" checked>Защитное стекло
                         </label>
 
                         <label class="form__label checkbox">
-                            <input type="checkbox" name="accessories" id="MagSafe">Зарядное устройство MagSafe
+                            <input class="checkbox__input" type="checkbox" name="accessories" value="MagSafe">Зарядное устройство MagSafe
                         </label>
                     </fieldset>
-
-                    <button type="submit" class="button form__submit">Оформить</button>
                 </form>
+
+                <button type="submit" class="button form__submit" form="form-order">Отправить</button>
+
             </div>
         </section>
     </main>
 
     <footer class="footer">
         <div class="container footer__flex">
+            
+        <p class="footer__info">&copy; iPhone 13 Promo, 2022</p>
+            
+        <div class="footer__copyright">
             <p>
-                <small class="footer__copyright">© iPhone 13 Promo, 2022</small>
+                Design by Anastasia Ilina 
             </p>
-
-            <p>
-                Design by Anastasia Ilina
-                <a href="mailto:ilina9825@gmail.com">ilina9825@gmail.com</a>
-            </p>
+                <a class="footer__mail" href="mailto:ilina9825@gmail.com">ilina9825@gmail.com</a>
+            </div>
         </div>
     </footer>
 </body>
