@@ -8,3 +8,19 @@ new Choices('#color', {
   itemSelectText: '',
 });
 
+$('#form-order').on('submit', function(event) {
+  event.preventDefault();
+
+  $.ajax({
+    url: 'https://jsonplaceholder.typicode.com/posts',
+    method: 'POST',
+    dataType: 'html',
+    data: $('#form-order').serialize(),
+    success: function(data) {
+      console.log(data);
+      $('#form-order').html('Спасибо, мы получили Ваш заказ!');
+      $('.form__submit').hide();
+    }
+  })
+})
+
